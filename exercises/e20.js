@@ -7,7 +7,11 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
+  let newArray = []
 
+  for (let i = 0; i < array.length; i++) {
+    
+  }
 }
 
 
