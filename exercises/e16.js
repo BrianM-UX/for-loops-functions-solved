@@ -11,7 +11,9 @@ export function flatArrays(array) {
 
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
-      newArray = newArray.concat(array[i])
+      for (let n = 0; n < array[i].length; n++) {
+        newArray.push(array[i][n]);
+      }
     }
 
     else {

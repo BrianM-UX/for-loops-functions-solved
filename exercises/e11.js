@@ -11,7 +11,7 @@ export function getAllWithdrawals(array) {
   for (let i = 0; i < array.length; i++) {
     let withdrawalAmounts = array[i].withdrawals;
 
-    if (withdrawalAmounts && Array.isArray(withdrawalAmounts)) {
+    if (withdrawalAmounts) {
       let sum = 0;
 
       for (let n = 0; n < withdrawalAmounts.length; n++) {
