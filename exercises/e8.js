@@ -6,21 +6,14 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  let highestBalance = []
-  let balance = array[0].balance
+  let highestBalance = [array[0].balance]
 
-  for (let i = 1; i < array.length; i++) {
-    if (array[i].balance > balance) {
-      balance = array[i].balance
+  for (let user of array) {
+    if (user.balance > highestBalance[0].balance) {
+      highestBalance = user
     }
   }
-
-  for (let n = 0; n < array.length; n++) {
-    if (array[n].balance === balance) {
-      highestBalance.push(array[n])
-    }
-  }
-
+  
   return highestBalance
 }
 
