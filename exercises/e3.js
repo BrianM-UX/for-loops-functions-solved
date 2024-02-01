@@ -14,8 +14,8 @@ export function getAverage(array) {
   for (let num = 0; num < array.length; num++) {
     sum += array[num]
   }
-  const average = sum / array.length
-  return average
+  
+  return sum / array.length
 }
 
 
@@ -38,16 +38,22 @@ export function getStringSum(str) {
       num += char
     }
     else if (num !== '') {
-      numInString.push(...num.split('').map(Number));
+      numInString.push();
       num = '';
     }
   }
 
   if (num !== '') {
-    numInString.push(...num.split('').map(Number));
+    for(let i = 0; i < num.length; i++) {
+      numInString.push(Number(num[i]))
+    }
   }
 
-  let total = numInString.length > 0 ? numInString.reduce((acc, num) => acc + num, 0) : 0;
+  let total = 0;
+
+  for (let i = 0; i < numInString.length; i++) {
+    total += numInString[i];
+  }
 
   return total;
 
