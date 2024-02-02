@@ -28,31 +28,11 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-  const numInString = []
-  let num = '';
-
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i]
-
-    if (!isNaN(char)) {
-      num += char
-    }
-    else if (num !== '') {
-      for (let j = 0; j < num.length; j++) {
-        numInString.push(Number(num[j]));
-      }
-      num = '';
-    }
-  }
-
-  if (num !== '') {
-      numInString.push(Number(num));
-  }
-
   let total = 0;
-
-  for (let i = 0; i < numInString.length; i++) {
-    total += numInString[i];
+  for (let elem of str) {
+    if (parseInt(elem)) {
+      total += +elem
+    }
   }
 
   return total;
