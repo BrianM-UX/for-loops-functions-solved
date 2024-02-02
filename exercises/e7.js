@@ -18,6 +18,7 @@ export function getClientWithLeastPositiveBalance(array) {
       leastPositive[0] = user;
     }
   }
+  return leastPositive
   
 }
 
