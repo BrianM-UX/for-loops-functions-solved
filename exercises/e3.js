@@ -38,15 +38,15 @@ export function getStringSum(str) {
       num += char
     }
     else if (num !== '') {
-      numInString.push();
+      for (let j = 0; j < num.length; j++) {
+        numInString.push(Number(num[j]));
+      }
       num = '';
     }
   }
 
   if (num !== '') {
-    for(let i = 0; i < num.length; i++) {
-      numInString.push(Number(num[i]))
-    }
+      numInString.push(Number(num));
   }
 
   let total = 0;
