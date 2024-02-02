@@ -8,9 +8,8 @@ export function reverseArray(array) {
   // Your code goes here...
   let newArray = []
 
-  for (let i = 0; i < array.length; i++) {
-    let reverseIndex = array.length - 1 - i
-    newArray.push(array[reverseIndex])
+  for (let i = array.length - 1; i >= 0; i--) {
+    newArray.push(array[i])
   }
 
   return newArray
